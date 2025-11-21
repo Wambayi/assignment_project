@@ -1,0 +1,7 @@
+<h1>{{ product.name }}</h1>
+<p>Category: {{ product.category.name }}</p>
+<p>Price: ${{ product.price }}</p>
+{% if product.image %}
+  <img src="{{ product.image.url }}" width="400">
+{% endif %}
+<p>{{ product.description }}</p>

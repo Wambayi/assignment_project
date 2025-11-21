@@ -1,0 +1,14 @@
+<h1>All Products</h1>
+<ul>
+  {% for product in products %}
+    <li>
+      <strong>{{ product.name }}</strong> - ${{ product.price }}<br>
+      Category: {{ product.category.name }}<br>
+      {% if product.image %}
+        <img src="{{ product.image.url }}" width="150">
+      {% endif %}
+      <br>
+      <a href="{% url 'product_detail' product.pk %}">View Details</a>
+    </li>
+  {% endfor %}
+</ul>
